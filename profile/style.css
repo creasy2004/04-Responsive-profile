@@ -1,0 +1,77 @@
+body{
+  background-color:#EEEEEE;
+}
+
+.container {
+  margin: 10px auto;
+  width: 900px ;
+}
+
+h1, h2{
+  font-family:'lora' ;
+  color: #101417;
+  text-align: center;
+}
+
+img{
+  border-radius: 50%;
+  width: 300px;
+}
+
+.descubreme-button {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color:#22668D;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.descubreme-button:hover {
+  background-color:#8ECDDD;
+}
+
+.card{
+background-color: white;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  text-align: center;
+}
+.paella-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#test{
+  width: 3000px;
+
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}

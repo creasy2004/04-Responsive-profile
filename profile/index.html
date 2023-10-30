@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+
+  <title>profile</title>
+</head>
+<body>
+
+  <div class="container">
+    <video id="background" autoplay loop src="./images/risitas4.mp4"></video>
+    <div  id="mydiv" onmousedown="dragElement(this)" class="card">
+      <h1>hola me llamo risitas</h1>
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstaticg.sportskeeda.com%2Feditor%2F2021%2F04%2Ff7504-16196838481260-800.jpg&f=1&nofb=1&ipt=694204ad3a102ba30b1f66ea2a0027eb623b92073b2209d0fa6484b321ddee85&ipo=images" alt="">
+      <h2>me gusta mucho hacer la cosina, siempre hago paella por la tarde con mis amigos en frente de la playa</h1>
+      <a class="descubreme-button" href="https://fr.wikipedia.org/wiki/El_Risitas">descúbreme</a>
+    </div>
+
+    <div id="mydiv" onmousedown="dragElement(this)" class="card">
+      <h1>como se hacer la paella <i class="fa-solid fa-kitchen-set"></i></h1>
+      <iframe src="https://youtu.be/ccNKlpMhMlw?si=GOUg4a-HEgzUFVhS" frameborder="0"></iframe>
+      </div>
+
+
+      <script>
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+        var myDiv = document.getElementById("mydiv");
+        dragElement(myDiv);
+    </script>
+
+
+  </div>
+</body>
